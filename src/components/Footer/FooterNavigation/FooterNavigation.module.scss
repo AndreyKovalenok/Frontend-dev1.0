@@ -1,0 +1,65 @@
+.FooterNavigation {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-right: 80px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 143px;
+    background-color: #3e4247;
+    top: -17px;
+    left: 0;
+  }
+}
+
+.FooterNavigation h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #646971;
+  margin-bottom: 7px;
+}
+
+.FooterNavigation ul {
+  margin-bottom: 15px;
+}
+
+.FooterNavigation li {
+  margin-bottom: 8px;
+}
+
+.FooterNavigation a {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 300;
+
+  &:hover {
+    color: #cccccc;
+  }
+}
+
+.link {
+  margin-bottom: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 8px;
+    background-image: url("./combined-shape.svg");
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    &:after {
+      right: 0px;
+    }
+  }
+}

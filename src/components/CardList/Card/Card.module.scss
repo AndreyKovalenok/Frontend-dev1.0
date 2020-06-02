@@ -1,0 +1,46 @@
+.Card {
+  display: flex;
+  transition: 0.5s;
+  background-color: #fff;
+
+  &:not(:last-child) {
+    margin-bottom: 48px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+.Card__img {
+  max-width: 491px;
+}
+
+.Card__descriptionWrapper {
+  padding: 24px 32px;
+  border-bottom: 2px solid #646971;
+}
+
+.Card__address {
+  font-family: "Monaco", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: #646971;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.Card__title {
+  font-family: "FiraSans", "Arial", sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 56px;
+}
+
+.Card__description {
+  font-family: "FiraSans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3e4247;
+  max-width: 590px;
+}

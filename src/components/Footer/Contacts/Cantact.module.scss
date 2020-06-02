@@ -1,0 +1,30 @@
+.Contacts {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Contacts__title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #646971;
+  margin-bottom: 8px;
+}
+
+.Contacts__account {
+  font-size: 14px;
+  font-weight: 300;
+  color: #a9afb6;
+  margin-bottom: 8px;
+
+  &:last-of-type {
+    margin-bottom: 16px;
+  }
+}
+
+.Contacts__phone {
+  font-size: 14px;
+  font-weight: 300;
+  color: #a9afb6;
+}

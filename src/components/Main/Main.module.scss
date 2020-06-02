@@ -1,0 +1,29 @@
+.Main {
+  padding-top: 64px;
+  padding-bottom: 96px;
+}
+
+.MainHeading {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.Header,
+.Description {
+  font-family: "FiraSans", "Arial", sans-serif;
+  color: #3e4247;
+}
+
+.Header {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+
+.Description {
+  max-width: 804px;
+  margin: 0 auto 16px;
+  font-size: 16px;
+  line-height: 24px;
+}

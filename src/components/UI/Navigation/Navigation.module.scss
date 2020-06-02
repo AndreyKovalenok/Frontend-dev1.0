@@ -1,0 +1,24 @@
+.Navigation {
+  margin-left: auto;
+}
+
+.Navigation__list {
+  display: flex;
+}
+
+.Navigation__item {
+  &:not(:first-child) {
+    margin-left: 32px;
+  }
+}
+
+.Navigation__link {
+  color: #3e4247;
+  font-family: "FirsSans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+
+  &:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  }
+}

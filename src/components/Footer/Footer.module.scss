@@ -1,0 +1,23 @@
+.Footer {
+  background-color: #111111;
+  font-family: "FiraSans", "Arial", sans-serif;
+  padding: 32px 0;
+}
+
+.Footer__inner {
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Footer__copyright {
+  max-width: 795px;
+  font-size: 11px;
+  color: #a9afb6;
+  font-weight: 300;
+}
+
+.Footer__navigation {
+  display: flex;
+  margin-bottom: 95px;
+}
