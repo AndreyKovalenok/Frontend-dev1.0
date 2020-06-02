@@ -1,4 +1,4 @@
 {
-  "*.+(js|jsx)": ["eslint --fix .", "git add"],
+  "*.+(js|jsx)": ["eslint --fix . --ext js,jsx", "git add"],
   "*.+(json|css|scss|md)": ["prettier --write", "git add"]
 }
