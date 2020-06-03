@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "./Footer.module.scss";
+import classes from "./styles.module.scss";
 
 import Contacts from "./Contacts";
 import FooterNavigation from "./FooterNavigation";

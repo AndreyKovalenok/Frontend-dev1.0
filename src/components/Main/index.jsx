@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "./Main.module.scss";
+import classes from "./styles.module.scss";
 
 import Button from "../UI/Button";
 import CardList from "../CardList";

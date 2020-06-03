@@ -1,11 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-import classes from "./Navigation.module.scss";
+import classes from "./styles.module.scss";
 
-const Navigation = () => {
+const Navigation = ({ isOpen }) => {
+  const cls = isOpen
+    ? `${classes.navigation} ${classes.active}`
+    : classes.navigation;
+
   return (
     <>
-      <nav className={classes.navigation}>
+      <nav className={cls}>
         <ul className={classes.list}>
           <li className={classes.item}>
             <a className={classes.link} href="/">
@@ -26,6 +31,10 @@ const Navigation = () => {
       </nav>
     </>
   );
+};
+
+Navigation.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
 };
 
 export default Navigation;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "./Cantact.module.scss";
+import classes from "./styles.module.scss";
 
 const Contacts = () => (
   <div className={classes.contacts}>

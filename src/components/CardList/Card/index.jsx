@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import classes from "./Card.module.scss";
+import classes from "./styles.module.scss";
 
 const Card = ({ img, address, title, description }) => (
   <li className={classes.card}>

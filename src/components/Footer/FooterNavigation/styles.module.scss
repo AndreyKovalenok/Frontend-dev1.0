@@ -1,6 +1,5 @@
 .navigation {
   position: relative;
-
   display: flex;
   flex-direction: column;
   margin-right: 80px;
@@ -10,7 +9,6 @@
     position: absolute;
     top: -17px;
     left: 0;
-
     display: block;
     width: 143px;
     height: 2px;
@@ -21,7 +19,6 @@
 
 .title {
   margin-bottom: 7px;
-
   font-size: var(--lower-font-size);
   font-weight: var(--bold-font);
   color: var(--light-text-color);
@@ -54,14 +51,11 @@
   &::after {
     content: "";
     position: absolute;
-
     top: 50%;
     right: 8px;
     transform: translateY(-50%);
-
     width: 9px;
     height: 8px;
-
     background-image: url("./combined-shape.svg");
     transition: right 0.5s;
   }

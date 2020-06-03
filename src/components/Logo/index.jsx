@@ -1,6 +1,6 @@
 import React from "react";
 
-import classes from "./Logo.module.scss";
+import classes from "./styles.module.scss";
 
 import logo from "./compass-logo.svg";
 
