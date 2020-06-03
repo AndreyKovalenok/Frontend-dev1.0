@@ -1,27 +1,30 @@
-.Header {
-  background-color: #fff;
+@import "../../assets/variables";
+
+.header {
+  background-color: var(--white-color);
 }
 
-.HeaderTopPanel {
+.top-panel {
+  position: relative;
   display: flex;
   padding: 20px 0;
-  position: relative;
 }
 
-.HeaderFill {
-  background-color: #161616;
+.header-fill {
+  display: none;
   padding: 80px 0;
   text-align: center;
-  display: none;
+
+  background-color: var(--header-fill-color);
 }
 
-.HeaderFill__img {
+.image {
   max-width: 419px;
   height: 131px;
 }
 
 @media (min-width: 600px) {
-  .HeaderFill {
+  .header-fill {
     display: block;
   }
 }

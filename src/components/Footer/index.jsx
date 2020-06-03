@@ -6,24 +6,29 @@ import Contacts from "./Contacts";
 import FooterNavigation from "./FooterNavigation";
 
 const Footer = () => (
-  <footer className={classes.Footer}>
+  <footer className={classes.footer}>
     <div className="wrapper wrapper_footer">
       <Contacts />
-
-      <div className={classes.Footer__inner}>
-        <div className={classes.Footer__navigation}>
+      <div className={classes.inner}>
+        <div className={classes.navigation}>
           <FooterNavigation
             title="Жилые комплексы"
-            links={["ВТБ Арена Парк", "Садовые кварталы", "Резиденция Монэ"]}
+            links={[
+              { id: 0, name: "ВТБ Арена Парк" },
+              { id: 1, name: "Садовые кварталы" },
+              { id: 2, name: "Резиденция Монэ" },
+            ]}
             linkToList="Все ЖК Москвы"
           />
           <FooterNavigation
             title="Компания"
-            links={["Команда", "О компании"]}
-            linkToList=""
+            links={[
+              { id: 0, name: "Команда" },
+              { id: 1, name: "О компании" },
+            ]}
           />
         </div>
-        <p className={classes.Footer__copyright}>
+        <p className={classes.copyright}>
           Любая информация, представленная на данном сайте, носит исключительно
           информационный характер и ни при каких условиях не является публичной
           офертой, определяемой положениями статьи 437 ГК РФ. © ООО «Ярд», 2017

@@ -9,20 +9,18 @@ import classes from "./Header.module.scss";
 
 const Header = () => {
   return (
-    <header className={classes.Header}>
+    <header className={classes.header}>
       <div className="wrapper">
-        <div className={classes.HeaderTopPanel}>
+        <div className={classes["top-panel"]}>
           <Logo />
           <Navigation />
         </div>
       </div>
-      <div className={classes.HeaderFill}>
+      <div className={classes["header-fill"]}>
         <img
-          className={classes.HeaderFill__img}
+          className={classes.image}
           src={BigLogo}
           alt="Компания Compass Development"
-          width="419"
-          height="131"
         />
       </div>
     </header>

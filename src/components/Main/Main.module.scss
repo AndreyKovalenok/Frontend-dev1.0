@@ -1,44 +1,45 @@
-.Main {
+@import "../../assets/variables";
+
+.main {
   padding-top: 32px;
   padding-bottom: 64px;
 }
 
-.MainHeading {
-  text-align: center;
+.main-heading {
   margin-bottom: 32px;
+  text-align: center;
 }
 
-.Header,
-.Description {
-  font-family: "FiraSans", "Arial", sans-serif;
-  color: #3e4247;
+.title,
+.description {
+  color: var(--dark-text-color);
 }
 
-.Header {
-  font-weight: bold;
-  font-size: 20px;
-  line-height: normal;
+.title {
   margin-bottom: 8px;
+
+  font-size: 20px;
+  font-weight: var(--bold-font);
 }
 
-.Description {
+.description {
   max-width: 804px;
   margin: 0 auto 16px;
-  font-size: 16px;
+
   line-height: 24px;
 }
 
 @media (min-width: 600px) {
-  .Main {
+  .main {
     padding-top: 64px;
     padding-bottom: 96px;
   }
 
-  .MainHeading {
+  .main-heading {
     margin-bottom: 64px;
   }
 
-  .Header {
-    font-size: 24px;
+  .title {
+    font-size: var(--main-title-font-size);
   }
 }

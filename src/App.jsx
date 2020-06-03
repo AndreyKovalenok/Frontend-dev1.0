@@ -2,8 +2,7 @@ import React from "react";
 
 import Home from "./pages/Home";
 
-import "./assets/global.scss";
-import "./assets/fonts.scss";
+import "./styles.scss";
 
 function App() {
   return (

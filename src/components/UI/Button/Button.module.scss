@@ -1,18 +1,17 @@
-.Button {
-  border: none;
-  background-color: transparent;
+@import "../../../assets/variables";
+
+.button {
   width: 193px;
   height: 40px;
-  background-color: #000000;
-  color: #ffffff;
-  font-family: "FiraSans", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  transition: background-color 0.3s;
+
   cursor: pointer;
+  border: none;
+  background-color: var(--black-color);
+  transition: background-color 0.3s;
+  color: var(--white-color);
 
   &:hover {
+    border: 2px solid var(--black-color);
     background-color: rgba(0, 0, 0, 0.8);
-    border: 2px solid #000000;
   }
 }

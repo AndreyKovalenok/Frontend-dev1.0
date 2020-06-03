@@ -1,23 +1,30 @@
-.Contacts {
-  margin-right: 40px;
-  flex-grow: 1;
+@import "../../../assets/variables";
+
+.contacts {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex-grow: 1;
   min-width: 110px;
+  margin-right: 40px;
 }
 
-.Contacts__title {
-  font-size: 14px;
-  font-weight: bold;
-  color: #646971;
+.title {
   margin-bottom: 8px;
+
+  font-size: var(--lower-font-size);
+  font-weight: var(--bold-font);
+  color: var(--dark-text-color);
 }
 
-.Contacts__account {
-  font-size: 14px;
-  font-weight: 300;
-  color: #a9afb6;
+.account,
+.phone {
+  font-size: var(--lower-font-size);
+  font-weight: var(--light-font);
+  color: var(--footer-text-color);
+}
+
+.account {
   margin-bottom: 8px;
 
   &:last-of-type {
@@ -25,14 +32,8 @@
   }
 }
 
-.Contacts__phone {
-  font-size: 14px;
-  font-weight: 300;
-  color: #a9afb6;
-}
-
 @media (max-width: 600px) {
-  .Contacts {
+  .contacts {
     margin-bottom: 48px;
   }
 }
