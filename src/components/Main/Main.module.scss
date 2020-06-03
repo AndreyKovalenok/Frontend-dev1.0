@@ -1,11 +1,11 @@
 .Main {
-  padding-top: 64px;
-  padding-bottom: 96px;
+  padding-top: 32px;
+  padding-bottom: 64px;
 }
 
 .MainHeading {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 .Header,
@@ -16,7 +16,7 @@
 
 .Header {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   line-height: normal;
   margin-bottom: 8px;
 }
@@ -26,4 +26,19 @@
   margin: 0 auto 16px;
   font-size: 16px;
   line-height: 24px;
+}
+
+@media (min-width: 600px) {
+  .Main {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .MainHeading {
+    margin-bottom: 64px;
+  }
+
+  .Header {
+    font-size: 24px;
+  }
 }

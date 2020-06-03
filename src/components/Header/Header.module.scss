@@ -5,15 +5,23 @@
 .HeaderTopPanel {
   display: flex;
   padding: 20px 0;
+  position: relative;
 }
 
 .HeaderFill {
   background-color: #161616;
   padding: 80px 0;
   text-align: center;
+  display: none;
 }
 
 .HeaderFill__img {
   max-width: 419px;
   height: 131px;
+}
+
+@media (min-width: 600px) {
+  .HeaderFill {
+    display: block;
+  }
 }

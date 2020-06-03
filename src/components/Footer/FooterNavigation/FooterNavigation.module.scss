@@ -63,3 +63,18 @@
     }
   }
 }
+
+@media (max-width: 420px) {
+  .FooterNavigation {
+    align-items: flex-start;
+    &:not(:last-of-type) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .link {
+    &::after {
+      right: -20px;
+    }
+  }
+}

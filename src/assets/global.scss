@@ -64,3 +64,19 @@ a {
     display: flex;
   }
 }
+
+@media (max-width: 1240px) {
+  .wrapper {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 0 16px;
+
+    &_footer {
+      flex-direction: column;
+    }
+  }
+}

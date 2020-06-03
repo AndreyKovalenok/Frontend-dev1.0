@@ -1,10 +1,11 @@
 .Card {
   display: flex;
+  flex-direction: column;
   transition: 0.5s;
   background-color: #fff;
 
   &:not(:last-child) {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
   }
 
   &:hover {
@@ -13,12 +14,8 @@
   }
 }
 
-.Card__img {
-  max-width: 491px;
-}
-
 .Card__descriptionWrapper {
-  padding: 24px 32px;
+  padding: 16px;
   border-bottom: 2px solid #646971;
 }
 
@@ -32,9 +29,10 @@
 
 .Card__title {
   font-family: "FiraSans", "Arial", sans-serif;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
-  line-height: 56px;
+  line-height: 40px;
+  margin-bottom: 8px;
 }
 
 .Card__description {
@@ -43,4 +41,35 @@
   line-height: 24px;
   color: #3e4247;
   max-width: 590px;
+}
+
+@media (min-width: 890px) {
+  .Card {
+    flex-direction: row;
+  }
+
+  .Card__img {
+    width: 40%;
+  }
+}
+
+@media (min-width: 600px) {
+  .Card__title {
+    font-size: 40px;
+  }
+
+  .Card {
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+  }
+
+  .Card__title {
+    line-height: 56px;
+    margin-bottom: 16px;
+  }
+
+  .Card__descriptionWrapper {
+    padding: 24px 32px;
+  }
 }
