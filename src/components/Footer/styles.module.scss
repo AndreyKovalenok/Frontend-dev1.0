@@ -1,0 +1,31 @@
+.footer {
+  padding: 32px 0;
+  background-color: var(--footer-bg-color);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  margin-top: 17px;
+}
+
+.copyright {
+  max-width: 795px;
+  font-size: var(--copyright-font-size);
+  font-weight: var(--light-font);
+  color: var(--footer-text-color);
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 420px) {
+  .navigation {
+    flex-direction: row;
+    margin-bottom: 95px;
+  }
+}

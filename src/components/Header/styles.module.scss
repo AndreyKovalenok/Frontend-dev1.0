@@ -1,0 +1,27 @@
+.header {
+  background-color: var(--white-color);
+}
+
+.top-panel {
+  position: relative;
+  display: flex;
+  padding: 20px 0;
+}
+
+.header-fill {
+  display: none;
+  padding: 80px 0;
+  text-align: center;
+  background-color: var(--header-fill-color);
+}
+
+.image {
+  max-width: 419px;
+  height: 131px;
+}
+
+@media (min-width: 600px) {
+  .header-fill {
+    display: block;
+  }
+}

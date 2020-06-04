@@ -1,0 +1,36 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  min-width: 110px;
+  margin-right: 40px;
+}
+
+.title {
+  margin-bottom: 8px;
+  font-size: var(--lower-font-size);
+  font-weight: var(--bold-font);
+  color: var(--dark-text-color);
+}
+
+.account,
+.phone {
+  font-size: var(--lower-font-size);
+  font-weight: var(--light-font);
+  color: var(--footer-text-color);
+}
+
+.account {
+  margin-bottom: 8px;
+
+  &:last-of-type {
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacts {
+    margin-bottom: 48px;
+  }
+}
