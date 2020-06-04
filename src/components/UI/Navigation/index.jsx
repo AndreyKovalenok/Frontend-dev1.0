@@ -4,13 +4,13 @@ import PropTypes from "prop-types";
 import classes from "./styles.module.scss";
 
 const Navigation = ({ isOpen }) => {
-  const cls = isOpen
+  const clsNav = isOpen
     ? `${classes.navigation} ${classes.active}`
     : classes.navigation;
 
   return (
     <>
-      <nav className={cls}>
+      <nav className={clsNav}>
         <ul className={classes.list}>
           <li className={classes.item}>
             <a className={classes.link} href="/">
