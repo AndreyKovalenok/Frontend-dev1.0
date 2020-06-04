@@ -1,0 +1,30 @@
+.description {
+  display: flex;
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.inner {
+  max-width: 996px;
+}
+
+.text {
+  line-height: 25px;
+  color: var(--dark-text-color);
+
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .description {
+    flex-direction: column;
+  }
+
+  .title {
+    margin-bottom: 16px;
+  }
+}

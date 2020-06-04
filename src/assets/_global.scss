@@ -59,6 +59,10 @@ a {
   text-decoration: none;
 }
 
+dl {
+  margin: 0;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -70,13 +74,15 @@ a {
 
 @media (max-width: 1240px) {
   .wrapper {
-    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 
 @media (max-width: 600px) {
   .wrapper {
-    padding: 0 16px;
+    padding-left: 16px;
+    padding-right: 16px;
 
     &_footer {
       flex-direction: column;

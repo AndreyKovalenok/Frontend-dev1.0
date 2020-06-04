@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 
 import Navigation from "../UI/Navigation";
 import Logo from "../Logo";
@@ -28,20 +29,26 @@ class Header extends React.Component {
 
     return (
       <header className={classes.header}>
-        <div className="wrapper">
-          <div className={classes["top-panel"]}>
-            <Logo />
-            <Navigation isOpen={isMenuOn} />
-            <MenuToggle onToggle={this.toggleMenuHandler} isOpen={isMenuOn} />
+        <div className={classes.border}>
+          <div className="wrapper">
+            <div className={classes["top-panel"]}>
+              <Logo />
+              <Navigation isOpen={isMenuOn} />
+              <MenuToggle onToggle={this.toggleMenuHandler} isOpen={isMenuOn} />
+            </div>
           </div>
         </div>
-        <div className={classes["header-fill"]}>
-          <img
-            className={classes.image}
-            src={BigLogo}
-            alt="Компания Compass Development"
-          />
-        </div>
+        <Switch>
+          <Route path="/" exact>
+            <div className={classes["header-fill"]}>
+              <img
+                className={classes.image}
+                src={BigLogo}
+                alt="Компания Compass Development"
+              />
+            </div>
+          </Route>
+        </Switch>
       </header>
     );
   }

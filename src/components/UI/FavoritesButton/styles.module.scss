@@ -1,0 +1,22 @@
+.button {
+  transition: box-shadow 0.2s;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 1px solid var(--favorite-border);
+  border-radius: 2px;
+  background-color: transparent;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: var(--light-font);
+  color: var(--favorive-color);
+
+  &:hover {
+    box-shadow: inset 0 0 2px 0 rgba($color: #000000, $alpha: 0.3);
+  }
+
+  &_reverse {
+    border: none;
+    background-color: var(--favorive-color);
+    color: var(--white-color);
+  }
+}

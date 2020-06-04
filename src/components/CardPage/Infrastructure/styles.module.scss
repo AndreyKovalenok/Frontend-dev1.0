@@ -1,0 +1,27 @@
+.infrastructure {
+  padding-top: 32px;
+  padding-bottom: 56px;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 200px;
+  margin-bottom: 8px;
+  line-height: 22px;
+  color: var(--dark-text-color);
+}
+
+@media (max-width: 600px) {
+  .item {
+    width: auto;
+    margin-right: 24px;
+  }
+}

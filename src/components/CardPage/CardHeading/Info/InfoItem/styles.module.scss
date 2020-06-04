@@ -1,0 +1,21 @@
+.item {
+  margin-bottom: 10px;
+  &:not(:last-child) {
+    margin-right: 48px;
+  }
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: var(--main-title-font-size);
+  line-height: 27px;
+  font-weight: var(--bold);
+  color: var(--dark-text-color);
+}
+
+.subtitle {
+  font-size: var(--lower-font-size);
+  line-height: 22px;
+  font-weight: var(--light-font);
+  color: var(--footer-text-color);
+}

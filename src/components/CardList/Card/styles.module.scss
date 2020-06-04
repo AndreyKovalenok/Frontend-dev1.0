@@ -1,7 +1,4 @@
 .card {
-  display: flex;
-  flex-direction: column;
-
   background-color: var(--white-color);
   transition: box-shadow 0.5s;
 
@@ -13,6 +10,11 @@
     cursor: pointer;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
   }
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
 }
 
 .inner {
@@ -35,6 +37,7 @@
   font-size: 32px;
   line-height: 40px;
   font-weight: var(--bold-font);
+  color: var(--black-color);
 }
 
 .description {
@@ -44,7 +47,7 @@
 }
 
 @media (min-width: 890px) {
-  .card {
+  .link {
     flex-direction: row;
   }
 
