@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <main className={classes.main}>
       <div className="wrapper">
-        <div className={classes["main-heading"]}>
+        <div className={classes.mainHeading}>
           <h2 className={classes.title}>Discover Our New Developments</h2>
           <p className={classes.description}>
             Compass brings a modern approach to new development marketing and

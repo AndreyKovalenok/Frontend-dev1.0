@@ -20,7 +20,7 @@ const FooterNavigation = ({ title, links, linkToList }) => {
       </ul>
 
       {linkToList ? (
-        <a className={classes["link-to-list"]} href="/">
+        <a className={classes.linkToList} href="/">
           {linkToList}
         </a>
       ) : null}

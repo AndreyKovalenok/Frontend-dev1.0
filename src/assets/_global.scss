@@ -74,15 +74,13 @@ dl {
 
 @media (max-width: 1240px) {
   .wrapper {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0 40px;
   }
 }
 
 @media (max-width: 600px) {
   .wrapper {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 16px;
 
     &_footer {
       flex-direction: column;

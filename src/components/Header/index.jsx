@@ -31,7 +31,7 @@ class Header extends React.Component {
       <header className={classes.header}>
         <div className={classes.border}>
           <div className="wrapper">
-            <div className={classes["top-panel"]}>
+            <div className={classes.topPanel}>
               <Logo />
               <Navigation isOpen={isMenuOn} />
               <MenuToggle onToggle={this.toggleMenuHandler} isOpen={isMenuOn} />
@@ -40,7 +40,7 @@ class Header extends React.Component {
         </div>
         <Switch>
           <Route path="/" exact>
-            <div className={classes["header-fill"]}>
+            <div className={classes.headerFill}>
               <img
                 className={classes.image}
                 src={BigLogo}

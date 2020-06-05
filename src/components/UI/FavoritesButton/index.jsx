@@ -1,21 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
+import cn from "classnames/bind";
 
 import classes from "./styles.module.scss";
 
+const cx = cn.bind(classes);
+
 const FavoritesButton = ({ children, reverse, className }) => {
-  const cls = [classes.button];
-
-  if (reverse) {
-    cls.push(classes.button_reverse);
-  }
-
-  if (className) {
-    cls.push(className);
-  }
+  const cls = cx({
+    button: true,
+    button_reverse: reverse,
+  });
 
   return (
-    <button className={cls.join(" ")} type="button">
+    <button className={`${cls} ${className}`} type="button">
       {children}
     </button>
   );

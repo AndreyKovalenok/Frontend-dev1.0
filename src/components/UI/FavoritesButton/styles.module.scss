@@ -5,8 +5,8 @@
   border: 1px solid var(--favorite-border);
   border-radius: 2px;
   background-color: transparent;
-  font-size: 10px;
-  line-height: 10px;
+  font-size: var(--small-button-font-size);
+  line-height: var(--small-button-line-height);
   font-weight: var(--light-font);
   color: var(--favorive-color);
 

@@ -34,15 +34,15 @@
 
 .title {
   margin-bottom: 8px;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: var(--medium-title-font-size);
+  line-height: var(--medium-title-line-height);
   font-weight: var(--bold-font);
   color: var(--black-color);
 }
 
 .description {
   max-width: 590px;
-  line-height: 24px;
+  line-height: var(--medium-line-height);
   color: var(--dark-text-color);
 }
 
@@ -58,7 +58,7 @@
 
 @media (min-width: 600px) {
   .title {
-    font-size: var(--card-title-font-size);
+    font-size: var(--large-title-font-size);
   }
 
   .card {
@@ -69,7 +69,7 @@
 
   .title {
     margin-bottom: 16px;
-    line-height: 56px;
+    line-height: var(--large-title-line-height);
   }
 
   .inner {
