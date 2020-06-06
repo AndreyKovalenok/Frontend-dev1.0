@@ -1,4 +1,13 @@
 .list {
   display: flex;
   flex-wrap: wrap;
+  min-width: 1200px;
+}
+
+.overflow {
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -6,15 +6,17 @@ import PropertiesItem from "./PropertiesItem";
 import classes from "./styles.module.scss";
 
 const PropertiesList = ({ items }) => (
-  <dl className={classes.list}>
-    {items.map((item) => (
-      <PropertiesItem
-        key={item.id}
-        term={item.term}
-        description={item.description}
-      />
-    ))}
-  </dl>
+  <div className={classes.overflow}>
+    <dl className={classes.list}>
+      {items.map((item) => (
+        <PropertiesItem
+          key={item.id}
+          term={item.term}
+          description={item.description}
+        />
+      ))}
+    </dl>
+  </div>
 );
 
 PropertiesList.propTypes = {
