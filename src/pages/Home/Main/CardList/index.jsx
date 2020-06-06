@@ -3,7 +3,7 @@ import Card from "./Card";
 
 // import bitmap from "./bitmap.jpg";
 // import bitmap2x from "./bitmap@2x.jpg";
-import bitmap3x from "../Main/bitmap@3x.jpg";
+import bitmap3x from "./bitmap@3x.jpg";
 
 const CardList = () => (
   <ul>

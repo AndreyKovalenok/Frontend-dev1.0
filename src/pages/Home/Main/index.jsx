@@ -2,8 +2,8 @@ import React from "react";
 
 import classes from "./styles.module.scss";
 
-import Button from "../UI/Button";
-import CardList from "../CardList";
+import Button from "../../../components/UI/Button";
+import CardList from "./CardList";
 
 const Main = () => {
   return (

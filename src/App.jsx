@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/pageBlocks/Header";
+import Footer from "./components/pageBlocks/Footer";
 import Home from "./pages/Home";
 import Complex from "./pages/Complex";
 

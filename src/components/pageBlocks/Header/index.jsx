@@ -1,9 +1,9 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Navigation from "../UI/Navigation";
-import Logo from "../Logo";
-import MenuToggle from "../UI/MenuToggle";
+import Navigation from "../../UI/Navigation";
+import Logo from "../../graphics/Logo";
+import MenuToggle from "../../UI/MenuToggle";
 
 import BigLogo from "./compass-development-logo.svg";
 

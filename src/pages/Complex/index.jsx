@@ -1,6 +1,6 @@
 import React from "react";
 
-import ComplexPage from "../../components/ComplexPage";
+import ComplexPage from "./ComplexPage";
 
 const Complex = () => <ComplexPage />;
 
