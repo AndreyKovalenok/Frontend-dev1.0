@@ -12,43 +12,33 @@ import img5 from "./img5.jpg";
 
 const Photos = () => (
   <div className={classes.photos}>
-    <ul className={classes.list}>
-      <li className={classes.item}>
-        <img
-          className={classes.image}
-          src={img1}
-          alt="Жилой комплекс Полянка/44 вид сбоку"
-        />
-      </li>
-      <li className={classes.item}>
-        <img
-          className={classes.image}
-          src={img2}
-          alt="Жилой комплекс Полянка/44 вид сверху"
-        />
-      </li>
-      <li className={classes.item}>
-        <img
-          className={classes.image}
-          src={img3}
-          alt="Жилой комплекс Полянка/44 вид снизу"
-        />
-      </li>
-      <li className={classes.item}>
-        <img
-          className={classes.image}
-          src={img4}
-          alt="Жилой комплекс Полянка/44 вид улицы"
-        />
-      </li>
-      <li className={classes.item}>
-        <img
-          className={classes.image}
-          src={img5}
-          alt="Жилой комплекс Полянка/44 вид днем"
-        />
-      </li>
-    </ul>
+    <div className={classes.gallery}>
+      <img
+        className={classes.image}
+        src={img1}
+        alt="Жилой комплекс Полянка/44 вид сбоку"
+      />
+      <img
+        className={classes.image}
+        src={img2}
+        alt="Жилой комплекс Полянка/44 вид сверху"
+      />
+      <img
+        className={classes.image}
+        src={img3}
+        alt="Жилой комплекс Полянка/44 вид снизу"
+      />
+      <img
+        className={classes.image}
+        src={img4}
+        alt="Жилой комплекс Полянка/44 вид улицы"
+      />
+      <img
+        className={classes.image}
+        src={img5}
+        alt="Жилой комплекс Полянка/44 вид днем"
+      />
+    </div>
     <div className="wrapper">
       <FavoritesButton reverse className={classes.button}>
         41 фотография

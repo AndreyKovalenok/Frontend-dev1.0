@@ -1,5 +1,20 @@
-.list {
+.gallery {
   display: flex;
+  width: 100%;
+  max-width: 1440px;
+  height: 400px;
+  margin: 0 auto;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.image {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
 }
 
 .button {
