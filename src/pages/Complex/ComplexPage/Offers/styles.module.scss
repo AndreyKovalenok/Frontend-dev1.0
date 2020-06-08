@@ -8,6 +8,13 @@
   text-align: center;
 }
 
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
 @media (max-width: 600px) {
   .section {
     padding: 32px 0;

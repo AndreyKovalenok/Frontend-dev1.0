@@ -8,8 +8,8 @@ import classes from "./styles.module.scss";
 const Info = ({ items }) => (
   <div className="wrapper">
     <ul className={classes.list}>
-      {items.map((item) => (
-        <InfoItem key={item.id} title={item.title} subtitle={item.subtitle} />
+      {items.map(({ id, title, subtitle }) => (
+        <InfoItem key={id} title={title} subtitle={subtitle} />
       ))}
     </ul>
   </div>

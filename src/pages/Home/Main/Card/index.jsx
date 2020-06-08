@@ -6,7 +6,7 @@ import classes from "./styles.module.scss";
 
 const Card = ({ img, address, title, description }) => (
   <li className={classes.card}>
-    <Link className={classes.link} to="complex">
+    <Link className={classes.link} to="/complex">
       <img className={classes.image} src={img} alt={title} />
       <div className={classes.inner}>
         <p className={classes.address}>{address}</p>

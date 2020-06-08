@@ -1,6 +1,6 @@
 import React from "react";
 
-import PropertiesList from "./PropertiesList";
+import PropertiesItem from "./PropertiesItem";
 import Title from "../../Title";
 
 import classes from "./styles.module.scss";
@@ -72,7 +72,13 @@ const Properties = () => {
   return (
     <div className={classes.properties}>
       <Title className={classes.title}>Характеристики</Title>
-      <PropertiesList items={items} />
+      <div className={classes.overflow}>
+        <dl className={classes.list}>
+          {items.map(({ id, term, description }) => (
+            <PropertiesItem key={id} term={term} description={description} />
+          ))}
+        </dl>
+      </div>
     </div>
   );
 };
