@@ -8,14 +8,16 @@ import Location from "./Location";
 
 import classes from "./styles.module.scss";
 
-const CardPage = () => (
-  <main className={classes.main}>
-    <CardHeading />
-    <Сharacteristics />
-    <Infrastructure />
-    <Offers />
-    <Location />
-  </main>
-);
+const CardPage = () => {
+  return (
+    <main className={classes.main}>
+      <CardHeading />
+      <Сharacteristics />
+      <Infrastructure />
+      <Offers />
+      <Location />
+    </main>
+  );
+};
 
 export default CardPage;

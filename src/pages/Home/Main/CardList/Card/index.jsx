@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 import classes from "./styles.module.scss";
 
-const Card = ({ img, address, title, description }) => (
+const Card = ({ img, address, title, description, id }) => (
   <li className={classes.card}>
-    <Link className={classes.link} to="complex">
+    <Link className={classes.link} to={`/complex/${id}`}>
       <img className={classes.image} src={img} alt={title} />
       <div className={classes.inner}>
         <p className={classes.address}>{address}</p>
@@ -22,6 +22,7 @@ Card.propTypes = {
   address: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Card;

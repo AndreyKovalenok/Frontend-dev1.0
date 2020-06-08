@@ -18,7 +18,7 @@ const Main = () => {
           </p>
           <Button>Contact The Team</Button>
         </div>
-        <CardList />
+        <CardList cards={[{ id: 1 }]} />
       </div>
     </main>
   );

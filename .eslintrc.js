@@ -8,11 +8,12 @@ module.exports = {
       'prettier',
       'prettier/react'
     ],
+    parser: "babel-eslint",
     parserOptions: {
       ecmaFeatures: {
         jsx: true,
       },
-      ecmaVersion: 11,
+      ecmaVersion: 6,
       sourceType: 'module',
     },
     plugins: [
