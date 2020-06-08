@@ -13,16 +13,15 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isMenuOn: false };
-    this.toggleMenuHandler = this.toggleMenuHandler.bind(this);
   }
 
-  toggleMenuHandler() {
+  toggleMenuHandler = () => {
     const { isMenuOn } = this.state;
 
     this.setState({
       isMenuOn: !isMenuOn,
     });
-  }
+  };
 
   render() {
     const { isMenuOn } = this.state;
