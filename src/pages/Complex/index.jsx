@@ -1,7 +1,21 @@
 import React from "react";
 
-import ComplexPage from "./ComplexPage";
+import CardHeading from "./CardHeading";
+import Сharacteristics from "./Сharacteristics";
+import Infrastructure from "./Infrastructure";
+import Offers from "./Offers";
+import Location from "./Location";
 
-const Complex = () => <ComplexPage />;
+import classes from "./styles.module.scss";
+
+const Complex = () => (
+  <main className={classes.main}>
+    <CardHeading />
+    <Сharacteristics />
+    <Infrastructure />
+    <Offers />
+    <Location />
+  </main>
+);
 
 export default Complex;

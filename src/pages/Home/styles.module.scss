@@ -1,0 +1,41 @@
+.main {
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+.mainHeading {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.title,
+.description {
+  color: var(--dark-text-color);
+}
+
+.title {
+  margin-bottom: 8px;
+  font-size: var(--small-title-font-size);
+  font-weight: var(--bold-font);
+}
+
+.description {
+  max-width: 804px;
+  margin: 0 auto 16px;
+  line-height: var(--medium-line-height);
+}
+
+@media (min-width: 600px) {
+  .main {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .mainHeading {
+    margin-bottom: 64px;
+  }
+
+  .title {
+    font-size: var(--main-title-font-size);
+  }
+}
