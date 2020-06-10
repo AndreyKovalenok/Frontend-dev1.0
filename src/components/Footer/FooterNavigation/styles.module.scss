@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin-right: 80px;
 
   &::before {
@@ -33,7 +34,7 @@
 }
 
 .link,
-.link-to-list {
+.linkToList {
   font-size: var(--lower-font-size);
   font-weight: var(--light-font);
   color: var(--white-color);
@@ -45,14 +46,14 @@
   }
 }
 
-.link-to-list {
+.linkToList {
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
     top: 50%;
-    right: 8px;
+    right: -20px;
     transform: translateY(-50%);
     width: 9px;
     height: 8px;
@@ -69,8 +70,6 @@
 
 @media (max-width: 420px) {
   .navigation {
-    align-items: flex-start;
-
     &:not(:last-of-type) {
       margin-bottom: 50px;
     }

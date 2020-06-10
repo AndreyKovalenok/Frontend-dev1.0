@@ -1,0 +1,61 @@
+.offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  max-width: 48%;
+  margin: 0 8px 16px;
+  padding: 24px 32px;
+  background-color: var(--white-color);
+}
+
+.title {
+  margin-bottom: 24px;
+  font-family: "Philosopher";
+  font-size: var(--small-title-font-size);
+  line-height: var(--main-line-height);
+  font-weight: var(--bold-font);
+  color: var(--dark-text-color);
+}
+
+.param {
+  margin-bottom: 33px;
+}
+
+.group {
+  &:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+}
+
+.term {
+  margin-bottom: 10px;
+  line-height: var(--main-line-height);
+  color: var(--footer-text-color);
+}
+
+.description {
+  margin-left: 0;
+  line-height: var(--main-line-height);
+  color: var(--dark-text-color);
+}
+
+.btn {
+  align-self: center;
+}
+
+@media (max-width: 765px) {
+  .offer {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .offer {
+    padding: 24px;
+  }
+
+  .btn {
+    padding: 12px;
+  }
+}

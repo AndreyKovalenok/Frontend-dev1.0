@@ -1,0 +1,29 @@
+.properties {
+  margin-bottom: 48px;
+  padding-top: 33px;
+  border-top: 2px solid var(--favorite-border);
+}
+
+.title {
+  margin-bottom: 18px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 1200px;
+}
+
+.overflow {
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .properties {
+    margin-bottom: 32px;
+  }
+}

@@ -1,0 +1,21 @@
+.group {
+  display: flex;
+  align-items: center;
+  width: 384px;
+}
+
+.term {
+  width: 48%;
+  font-size: var(--lower-font-size);
+  line-height: var(--main-line-height);
+  color: var(--footer-text-color);
+}
+
+.description {
+  width: 52%;
+  font-size: var(--lower-font-size);
+  text-align: left;
+  line-height: var(--medium-line-height);
+  font-weight: var(--medium-font);
+  color: var(--dark-text-color);
+}

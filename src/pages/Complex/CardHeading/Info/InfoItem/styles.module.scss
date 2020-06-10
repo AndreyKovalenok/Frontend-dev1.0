@@ -1,0 +1,22 @@
+.item {
+  margin-bottom: 10px;
+  &:not(:last-child) {
+    margin-right: 48px;
+  }
+}
+
+.title {
+  margin-bottom: 10px;
+  font-family: "Philosopher";
+  font-size: var(--main-title-font-size);
+  line-height: var(--title-line-height);
+  font-weight: var(--bold-font);
+  color: var(--dark-text-color);
+}
+
+.subtitle {
+  font-size: var(--lower-font-size);
+  line-height: var(--main-line-height);
+  font-weight: var(--light-font);
+  color: var(--footer-text-color);
+}
