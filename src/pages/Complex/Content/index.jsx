@@ -9,13 +9,25 @@ import Location from "./Location";
 
 import classes from "./styles.module.scss";
 
-const Content = ({ complexData: { name, address, aboutComplex } }) => {
+const Content = ({
+  complexData: {
+    name,
+    address,
+    aboutComplex,
+    characteristics,
+    description,
+    infrastructure,
+  },
+}) => {
   return (
     <main className={classes.main}>
       <CardHeading name={name} address={address} aboutComplex={aboutComplex} />
-      <Сharacteristics />
-      <Infrastructure />
-      <Offers />
+      <Сharacteristics
+        characteristics={characteristics}
+        description={description}
+      />
+      <Infrastructure infrastructure={infrastructure} />
+      <Offers name={name} />
       <Location />
     </main>
   );
@@ -31,6 +43,25 @@ Content.propTypes = {
       PropTypes.shape({
         id: PropTypes.number.isRequired,
         subtitle: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    characteristics: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        term: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    description: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        text: PropTypes.string.isRequired,
+      })
+    ).isRequired,
+    infrastructure: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
       })
     ).isRequired,
