@@ -1,21 +1,7 @@
 import React from "react";
 
-import CardHeading from "./CardHeading";
-import Сharacteristics from "./Сharacteristics";
-import Infrastructure from "./Infrastructure";
-import Offers from "./Offers";
-import Location from "./Location";
+import Content from "./Content";
 
-import classes from "./styles.module.scss";
-
-const Complex = () => (
-  <main className={classes.main}>
-    <CardHeading />
-    <Сharacteristics />
-    <Infrastructure />
-    <Offers />
-    <Location />
-  </main>
-);
+const Complex = () => <Content />;
 
 export default Complex;

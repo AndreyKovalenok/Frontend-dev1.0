@@ -1,6 +1,6 @@
 import React from "react";
 
-import FavoritesButton from "../../../../components/UI/FavoritesButton";
+import FavoritesButton from "../../../../../components/UI/FavoritesButton";
 
 import classes from "./styles.module.scss";
 
