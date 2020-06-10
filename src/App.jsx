@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/Header";
@@ -9,14 +9,32 @@ import Complex from "./pages/Complex";
 import "./styles.scss";
 
 function App() {
+  const [mainData, setMainData] = useState(null);
+  const [isFetching, setFetching] = useState(true);
+
+  useEffect(() => {
+    fetch("/data.json")
+      .then((response) => response.json())
+      .then((result) => {
+        setMainData(result);
+        setFetching(false);
+      });
+  }, []);
+
   return (
     <div className="App">
-      <Header />
-      <Switch>
-        <Route path="/" component={Home} exact />
-        <Route path="/complex" component={Complex} exact />
-      </Switch>
-      <Footer />
+      {!isFetching ? (
+        <>
+          <Header />
+          <Switch>
+            <Route path="/" exact>
+              <Home mainData={mainData} />
+            </Route>
+            <Route path="/complex:id" component={Complex} exact />
+          </Switch>
+          <Footer />
+        </>
+      ) : null}
     </div>
   );
 }

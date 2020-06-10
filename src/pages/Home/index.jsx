@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import classes from "./styles.module.scss";
 
@@ -7,34 +8,7 @@ import Card from "./Card";
 
 import bitmap3x from "./bitmap@3x.jpg";
 
-const Home = () => {
-  const cardArray = [
-    {
-      id: 1,
-      img: bitmap3x,
-      address: "Якиманка, ул. Большая Полянка",
-      title: "Полянка/44",
-      description:
-        "Садовые Кварталы — жилой комплекс в Хамовниках. На территории — четыре жилых квартала, двухуровневая торговая галерея, школа, парк и большой пруд.",
-    },
-    {
-      id: 2,
-      img: bitmap3x,
-      address: "Хамовники, ул. Ефремова",
-      title: "Садовые Кварталы",
-      description:
-        "Садовые Кварталы — жилой комплекс в Хамовниках. На территории — четыре жилых квартала, двухуровневая торговая галерея, школа, парк и большой пруд.",
-    },
-    {
-      id: 3,
-      img: bitmap3x,
-      address: "Басманный, ул. Нижняя Красносельская",
-      title: "TriBeCa Apartments",
-      description:
-        "TriBeCa Apartments — это жилой комплекс с квартирами премиум и бизнес-класса. Корпуса спроектированы в стиле ар-деко и похожи на здания Нью-Йорка.",
-    },
-  ];
-
+const Home = ({ mainData }) => {
   return (
     <main className={classes.main}>
       <div className="wrapper">
@@ -48,19 +22,36 @@ const Home = () => {
           <Button>Contact The Team</Button>
         </div>
         <ul>
-          {cardArray.map(({ id, img, address, title, description }) => (
-            <Card
-              key={id}
-              img={img}
-              address={address}
-              title={title}
-              description={description}
-            />
-          ))}
+          {mainData.map(
+            ({ id, name, shortDescription, address: { district, street } }) => (
+              <Card
+                key={id}
+                id={id}
+                img={bitmap3x}
+                name={name}
+                shortDescription={shortDescription}
+                district={district}
+                street={street}
+              />
+            )
+          )}
         </ul>
       </div>
     </main>
   );
+};
+
+Home.propTypes = {
+  mainData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      shortDescription: PropTypes.string.isRequired,
+      address: PropTypes.objectOf(
+        PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+      ).isRequired,
+    })
+  ).isRequired,
 };
 
 export default Home;

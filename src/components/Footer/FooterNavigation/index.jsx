@@ -8,11 +8,11 @@ const FooterNavigation = ({ title, links, linkToList }) => {
     <div className={classes.navigation}>
       <h4 className={classes.title}>{title}</h4>
       <ul className={classes.list}>
-        {links.map((link) => {
+        {links.map(({ id, name }) => {
           return (
-            <li className={classes.item} key={link.id}>
+            <li className={classes.item} key={id}>
               <a className={classes.link} href="/">
-                {link.name}
+                {name}
               </a>
             </li>
           );
