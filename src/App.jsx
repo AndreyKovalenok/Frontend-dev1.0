@@ -30,7 +30,9 @@ function App() {
             <Route path="/" exact>
               <Home mainData={mainData} />
             </Route>
-            <Route path="/complex:id" component={Complex} exact />
+            <Route path="/complex/:id" exact>
+              <Complex mainData={mainData} />
+            </Route>
           </Switch>
           <Footer />
         </>

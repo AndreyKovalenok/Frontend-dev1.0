@@ -5,10 +5,10 @@ import InfoItem from "./InfoItem";
 
 import classes from "./styles.module.scss";
 
-const Info = ({ items }) => (
+const Info = ({ aboutComplex }) => (
   <div className="wrapper">
     <ul className={classes.list}>
-      {items.map(({ id, title, subtitle }) => (
+      {aboutComplex.map(({ id, title, subtitle }) => (
         <InfoItem key={id} title={title} subtitle={subtitle} />
       ))}
     </ul>
@@ -16,7 +16,13 @@ const Info = ({ items }) => (
 );
 
 Info.propTypes = {
-  items: PropTypes.arrayOf(Object).isRequired,
+  aboutComplex: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      subtitle: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default Info;
