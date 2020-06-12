@@ -7,11 +7,11 @@ import Info from "./Info";
 
 import classes from "./styles.module.scss";
 
-const CardHeading = ({ name, address, aboutComplex, sliderStateHandler }) => (
+const CardHeading = ({ name, address, mainInfo, sliderStateHandler }) => (
   <section className={classes.heading}>
     <Head name={name} address={address} />
     <Photos sliderStateHandler={sliderStateHandler} />
-    <Info aboutComplex={aboutComplex} />
+    <Info mainInfo={mainInfo} />
   </section>
 );
 
@@ -20,7 +20,7 @@ CardHeading.propTypes = {
   address: PropTypes.objectOf(
     PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   ).isRequired,
-  aboutComplex: PropTypes.arrayOf(
+  mainInfo: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       subtitle: PropTypes.string.isRequired,

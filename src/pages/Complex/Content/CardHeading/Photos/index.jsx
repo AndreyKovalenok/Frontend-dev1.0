@@ -12,13 +12,7 @@ import img4 from "./img4.jpg";
 import img5 from "./img5.jpg";
 
 const Photos = ({ sliderStateHandler }) => (
-  <div
-    className={classes.photos}
-    role="button"
-    tabIndex="0"
-    onClick={sliderStateHandler}
-    onKeyDown={sliderStateHandler}
-  >
+  <div className={classes.photos}>
     <div className={classes.gallery}>
       <img
         className={classes.image}
@@ -47,7 +41,11 @@ const Photos = ({ sliderStateHandler }) => (
       />
     </div>
     <div className="wrapper">
-      <FavoritesButton reverse className={classes.button}>
+      <FavoritesButton
+        onClick={sliderStateHandler}
+        reverse
+        className={classes.button}
+      >
         41 фотография
       </FavoritesButton>
     </div>

@@ -16,7 +16,7 @@ const Content = ({
   complexData: {
     name,
     address,
-    aboutComplex,
+    mainInfo,
     characteristics,
     description,
     infrastructure,
@@ -39,7 +39,7 @@ const Content = ({
       <CardHeading
         name={name}
         address={address}
-        aboutComplex={aboutComplex}
+        mainInfo={mainInfo}
         sliderStateHandler={sliderStateHandler}
       />
       <Сharacteristics
@@ -63,7 +63,7 @@ Content.propTypes = {
     address: PropTypes.objectOf(
       PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     ).isRequired,
-    aboutComplex: PropTypes.arrayOf(
+    mainInfo: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
         subtitle: PropTypes.string.isRequired,

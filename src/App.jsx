@@ -23,20 +23,18 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       {!isFetching ? (
-        <>
-          <Header />
-          <Switch>
-            <Route path="/" exact>
-              <Home mainData={mainData} />
-            </Route>
-            <Route path="/complex/:id" exact>
-              <Complex mainData={mainData} />
-            </Route>
-          </Switch>
-          <Footer />
-        </>
+        <Switch>
+          <Route path="/" exact>
+            <Home mainData={mainData} />
+          </Route>
+          <Route path="/complex/:id" exact>
+            <Complex mainData={mainData} />
+          </Route>
+        </Switch>
       ) : null}
+      <Footer />
     </div>
   );
 }

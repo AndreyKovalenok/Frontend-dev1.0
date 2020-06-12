@@ -9,7 +9,7 @@
       "houseNumber": 44,
       "postcode": "119180"
     },
-    "aboutComplex": [
+    "mainInfo": [
       {
         "id": 0,
         "subtitle": "предложений",
@@ -155,7 +155,7 @@
       "houseNumber": 128,
       "postcode": "432645"
     },
-    "aboutComplex": [
+    "mainInfo": [
       {
         "id": 0,
         "subtitle": "предложений",
@@ -301,7 +301,7 @@
       "houseNumber": 42,
       "postcode": "235234"
     },
-    "aboutComplex": [
+    "mainInfo": [
       {
         "id": 0,
         "subtitle": "предложений",
