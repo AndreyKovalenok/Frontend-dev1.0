@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
 
-import CardHeading from "./CardHeading";
-import Сharacteristics from "./Сharacteristics";
-import Infrastructure from "./Infrastructure";
-import Offers from "./Offers";
-import Location from "./Location";
+import Content from "./Content";
 
-import classes from "./styles.module.scss";
+const Complex = ({
+  match: {
+    params: { id },
+  },
+  mainData,
+}) => {
+  const [complexData, setComplexData] = useState(null);
 
-const Complex = () => (
-  <main className={classes.main}>
-    <CardHeading />
-    <Сharacteristics />
-    <Infrastructure />
-    <Offers />
-    <Location />
-  </main>
-);
+  useEffect(() => {
+    const currentData = mainData.find((el) => el.id === Number(id));
 
-export default Complex;
+    setComplexData(currentData);
+  }, [mainData, id]);
+
+  return complexData ? <Content complexData={complexData} /> : null;
+};
+
+Complex.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  }).isRequired,
+  mainData: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+export default withRouter(Complex);

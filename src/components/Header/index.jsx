@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Navigation from "../UI/Navigation";
@@ -9,48 +9,37 @@ import BigLogo from "./compass-development-logo.svg";
 
 import classes from "./styles.module.scss";
 
-class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isMenuOn: false };
-  }
+const Header = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
-  toggleMenuHandler = () => {
-    const { isMenuOn } = this.state;
-
-    this.setState({
-      isMenuOn: !isMenuOn,
-    });
+  const toggleMenuHandler = () => {
+    setMenuOpen(!isMenuOpen);
   };
 
-  render() {
-    const { isMenuOn } = this.state;
-
-    return (
-      <header className={classes.header}>
-        <div className={classes.border}>
-          <div className="wrapper">
-            <div className={classes.topPanel}>
-              <Logo />
-              <Navigation isOpen={isMenuOn} />
-              <MenuToggle onToggle={this.toggleMenuHandler} isOpen={isMenuOn} />
-            </div>
+  return (
+    <header className={classes.header}>
+      <div className={classes.border}>
+        <div className="wrapper">
+          <div className={classes.topPanel}>
+            <Logo />
+            <Navigation isOpen={isMenuOpen} />
+            <MenuToggle onToggle={toggleMenuHandler} isOpen={isMenuOpen} />
           </div>
         </div>
-        <Switch>
-          <Route path="/" exact>
-            <div className={classes.headerFill}>
-              <img
-                className={classes.image}
-                src={BigLogo}
-                alt="Компания Compass Development"
-              />
-            </div>
-          </Route>
-        </Switch>
-      </header>
-    );
-  }
-}
+      </div>
+      <Switch>
+        <Route path="/" exact>
+          <div className={classes.headerFill}>
+            <img
+              className={classes.image}
+              src={BigLogo}
+              alt="Компания Compass Development"
+            />
+          </div>
+        </Route>
+      </Switch>
+    </header>
+  );
+};
 
 export default Header;

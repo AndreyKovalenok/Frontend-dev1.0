@@ -6,14 +6,14 @@ import classes from "./styles.module.scss";
 
 const cx = cn.bind(classes);
 
-const FavoritesButton = ({ children, reverse, className }) => {
+const FavoritesButton = ({ children, reverse, className, onClick }) => {
   const cls = cx({
     button: true,
     button_reverse: reverse,
   });
 
   return (
-    <button className={`${cls} ${className}`} type="button">
+    <button onClick={onClick} className={`${cls} ${className}`} type="button">
       {children}
     </button>
   );
@@ -22,12 +22,14 @@ const FavoritesButton = ({ children, reverse, className }) => {
 FavoritesButton.defaultProps = {
   reverse: false,
   className: "",
+  onClick: null,
 };
 
 FavoritesButton.propTypes = {
   children: PropTypes.node.isRequired,
   reverse: PropTypes.bool,
   className: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default FavoritesButton;

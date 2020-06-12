@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Offer from "./Offer";
 import Title from "../Title";
 
 import classes from "./styles.module.scss";
 
-const Offers = () => {
+const Offers = ({ name }) => {
   const offersArray = [
     {
       id: 1,
@@ -30,7 +31,7 @@ const Offers = () => {
   return (
     <section className={classes.section}>
       <div className="wrapper">
-        <Title className={classes.title}>Предложения в ЖК «Полянка/44»</Title>
+        <Title className={classes.title}>Предложения в ЖК {name}</Title>
         <ul className={classes.list}>
           {offersArray.map(({ id, title, area, price }) => (
             <Offer key={id} title={title} area={area} price={price} />
@@ -39,6 +40,10 @@ const Offers = () => {
       </div>
     </section>
   );
+};
+
+Offers.propTypes = {
+  name: PropTypes.string.isRequired,
 };
 
 export default Offers;

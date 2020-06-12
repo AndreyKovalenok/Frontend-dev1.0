@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-import FavoritesButton from "../../../../components/UI/FavoritesButton";
+import FavoritesButton from "../../../../../components/UI/FavoritesButton";
 
 import classes from "./styles.module.scss";
 
@@ -10,7 +11,7 @@ import img3 from "./img3.jpg";
 import img4 from "./img4.jpg";
 import img5 from "./img5.jpg";
 
-const Photos = () => (
+const Photos = ({ sliderStateHandler }) => (
   <div className={classes.photos}>
     <div className={classes.gallery}>
       <img
@@ -40,11 +41,19 @@ const Photos = () => (
       />
     </div>
     <div className="wrapper">
-      <FavoritesButton reverse className={classes.button}>
+      <FavoritesButton
+        onClick={sliderStateHandler}
+        reverse
+        className={classes.button}
+      >
         41 фотография
       </FavoritesButton>
     </div>
   </div>
 );
+
+Photos.propTypes = {
+  sliderStateHandler: PropTypes.func.isRequired,
+};
 
 export default Photos;
