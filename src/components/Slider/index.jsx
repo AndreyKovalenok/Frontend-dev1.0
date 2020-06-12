@@ -1,11 +1,11 @@
-/** @jsx jsx */
-import { useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { css, jsx } from "@emotion/core";
 
 import SliderContent from "./SliderContent";
 import Slide from "./Slide";
 import SLiderState from "./SliderState";
+
+import classes from "./styles.module.scss";
 
 const Slider = ({ slides, sliderStateHandler }) => {
   const getWidth = () => window.innerWidth * 0.66;
@@ -13,21 +13,9 @@ const Slider = ({ slides, sliderStateHandler }) => {
   const [state, setState] = useState({
     current: 0,
     translate: 0,
-    transition: 0.7,
   });
 
-  const { current, translate, transition } = state;
-
-  const SliderCSS = css`
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: rgba(17, 17, 17, 0.95);
-  `;
+  const { current, translate } = state;
 
   const nextSlide = () => {
     setState({
@@ -47,43 +35,25 @@ const Slider = ({ slides, sliderStateHandler }) => {
 
   return (
     <div
-      css={SliderCSS}
+      className={classes.slider}
       role="button"
       tabIndex="0"
       onClick={sliderStateHandler}
       onKeyDown={sliderStateHandler}
     >
-      <SliderContent
-        translate={translate}
-        transition={transition}
-        width={getWidth() * slides.length}
-      >
+      <SliderContent translate={translate} width={getWidth() * slides.length}>
         {slides.map(({ id, image }) => {
           let SlideItem = null;
 
           if (id === current) {
-            SlideItem = (
-              <Slide key={id} content={image} transition={transition} />
-            );
+            SlideItem = <Slide key={id} content={image} />;
           } else if (id > current) {
             SlideItem = (
-              <Slide
-                key={id}
-                content={image}
-                handleClick={nextSlide}
-                scale
-                transition={transition}
-              />
+              <Slide key={id} content={image} handleClick={nextSlide} scale />
             );
           } else {
             SlideItem = (
-              <Slide
-                key={id}
-                content={image}
-                handleClick={prevSlide}
-                scale
-                transition={transition}
-              />
+              <Slide key={id} content={image} handleClick={prevSlide} scale />
             );
           }
 

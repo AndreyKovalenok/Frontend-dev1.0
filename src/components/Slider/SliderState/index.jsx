@@ -1,17 +1,10 @@
-/** @jsx jsx */
+import React from "react";
 import PropTypes from "prop-types";
-import { css, jsx } from "@emotion/core";
+
+import classes from "./styles.module.scss";
 
 const SliderState = ({ slidesCount, currentSlide }) => (
-  <p
-    css={css`
-      position: fixed;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      color: var(--footer-text-color);
-    `}
-  >
+  <p className={classes.sliderState}>
     {currentSlide}/{slidesCount} Главный фасад
   </p>
 );
