@@ -7,10 +7,10 @@ import Info from "./Info";
 
 import classes from "./styles.module.scss";
 
-const CardHeading = ({ name, address, aboutComplex }) => (
+const CardHeading = ({ name, address, aboutComplex, sliderStateHandler }) => (
   <section className={classes.heading}>
     <Head name={name} address={address} />
-    <Photos />
+    <Photos sliderStateHandler={sliderStateHandler} />
     <Info aboutComplex={aboutComplex} />
   </section>
 );
@@ -27,6 +27,7 @@ CardHeading.propTypes = {
       title: PropTypes.string.isRequired,
     })
   ).isRequired,
+  sliderStateHandler: PropTypes.func.isRequired,
 };
 
 export default CardHeading;

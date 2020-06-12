@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import FavoritesButton from "../../../../../components/UI/FavoritesButton";
 
@@ -10,8 +11,14 @@ import img3 from "./img3.jpg";
 import img4 from "./img4.jpg";
 import img5 from "./img5.jpg";
 
-const Photos = () => (
-  <div className={classes.photos}>
+const Photos = ({ sliderStateHandler }) => (
+  <div
+    className={classes.photos}
+    role="button"
+    tabIndex="0"
+    onClick={sliderStateHandler}
+    onKeyDown={sliderStateHandler}
+  >
     <div className={classes.gallery}>
       <img
         className={classes.image}
@@ -46,5 +53,9 @@ const Photos = () => (
     </div>
   </div>
 );
+
+Photos.propTypes = {
+  sliderStateHandler: PropTypes.func.isRequired,
+};
 
 export default Photos;
