@@ -1,4 +1,4 @@
 {
-  "src/*.+(js|jsx)": ["eslint --fix . --ext js,jsx", "git add"],
-  "src/*.+(json|css|scss|md)": ["prettier --write", "git add"]
+  "*.+(js|jsx)": ["eslint --fix . --ext js,jsx", "git add"],
+  "*.+(json|css|scss|md)": ["prettier --write", "git add"]
 }
