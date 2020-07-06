@@ -13,7 +13,7 @@ function App() {
   const [isFetching, setFetching] = useState(true);
 
   useEffect(() => {
-    fetch("/data.json")
+    fetch("/Frontend-dev1.0/data.json")
       .then((response) => response.json())
       .then((result) => {
         setMainData(result);
@@ -26,10 +26,10 @@ function App() {
       <Header />
       {!isFetching ? (
         <Switch>
-          <Route path="/" exact>
+          <Route path="/Frontend-dev1.0" exact>
             <Home mainData={mainData} />
           </Route>
-          <Route path="/complex/:id" exact>
+          <Route path="/Frontend-dev1.0/complex/:id" exact>
             <Complex mainData={mainData} />
           </Route>
         </Switch>
