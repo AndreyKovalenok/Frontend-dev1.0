@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Frontend-dev1.0/static/css/main.f410e681.chunk.css",
+    "main.js": "/Frontend-dev1.0/static/js/main.53f18d81.chunk.js",
+    "main.js.map": "/Frontend-dev1.0/static/js/main.53f18d81.chunk.js.map",
+    "runtime-main.js": "/Frontend-dev1.0/static/js/runtime-main.536839e8.js",
+    "runtime-main.js.map": "/Frontend-dev1.0/static/js/runtime-main.536839e8.js.map",
+    "static/js/2.69df863c.chunk.js": "/Frontend-dev1.0/static/js/2.69df863c.chunk.js",
+    "static/js/2.69df863c.chunk.js.map": "/Frontend-dev1.0/static/js/2.69df863c.chunk.js.map",
+    "index.html": "/Frontend-dev1.0/index.html",
+    "precache-manifest.208b47cb830f44b51bb7ec0767af44c4.js": "/Frontend-dev1.0/precache-manifest.208b47cb830f44b51bb7ec0767af44c4.js",
+    "service-worker.js": "/Frontend-dev1.0/service-worker.js",
+    "static/css/main.f410e681.chunk.css.map": "/Frontend-dev1.0/static/css/main.f410e681.chunk.css.map",
+    "static/js/2.69df863c.chunk.js.LICENSE.txt": "/Frontend-dev1.0/static/js/2.69df863c.chunk.js.LICENSE.txt",
+    "static/media/styles.scss": "/Frontend-dev1.0/static/media/Philosopher-Bold.ce521496.woff2",
+    "static/media/bitmap@3x.jpg": "/Frontend-dev1.0/static/media/bitmap@3x.01577d8d.jpg",
+    "static/media/styles.module.scss": "/Frontend-dev1.0/static/media/combined-shape.653c2cd2.svg",
+    "static/media/compass-development-logo.svg": "/Frontend-dev1.0/static/media/compass-development-logo.85ee97f7.svg",
+    "static/media/compass-logo.svg": "/Frontend-dev1.0/static/media/compass-logo.8073f05c.svg",
+    "static/media/img1.jpg": "/Frontend-dev1.0/static/media/img1.9fe7f056.jpg",
+    "static/media/img2.jpg": "/Frontend-dev1.0/static/media/img2.d0c9d615.jpg",
+    "static/media/img3.jpg": "/Frontend-dev1.0/static/media/img3.8bcdcd08.jpg",
+    "static/media/img4.jpg": "/Frontend-dev1.0/static/media/img4.0612f3a1.jpg",
+    "static/media/img5.jpg": "/Frontend-dev1.0/static/media/img5.03b6f2cd.jpg",
+    "static/media/map@3x.png": "/Frontend-dev1.0/static/media/map@3x.af6ad9b2.png",
+    "static/media/polyanka-photo@3x.jpg": "/Frontend-dev1.0/static/media/polyanka-photo@3x.e2d8de49.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.536839e8.js",
+    "static/js/2.69df863c.chunk.js",
+    "static/css/main.f410e681.chunk.css",
+    "static/js/main.53f18d81.chunk.js"
+  ]
+}
